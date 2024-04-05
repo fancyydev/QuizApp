@@ -2,6 +2,37 @@ body {
     background-color: #111927;
     margin: 0;
 }
+.container {
+    display: flex;
+    width: auto;
+    padding-top: 55px;
+}
+  
+.section {
+    width: 30%;
+    position: relative;
+}
+
+#descending {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Passion One", regular;
+    font-size: 180px;
+    color: #EF0E00;
+}
+
+#ascending {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Passion One", regular;
+    font-size: 180px;
+    color: #9FEF00;
+}
+
 
 .navbar {
     width: auto;
@@ -17,3 +48,29 @@ body {
     padding-top: 14px;
 }
 
+.questions {
+    text-align: center;
+    width: 40%;
+}
+
+.questions label {
+    color: white;
+    font-family: "Comfortaa", regular;
+    font-size: 15px;
+}
+.questions input {
+    height: 35px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+#response {
+    width: 170px;
+    height: 40px;
+    background-color: #9FEF00;
+    border-radius: 8px;
+    font-family: "Passion One", regular;
+    font-size: 25px;
+    color: #252E3E;
+}
