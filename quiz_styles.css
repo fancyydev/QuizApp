@@ -1,0 +1,19 @@
+body {
+    background-color: #111927;
+    margin: 0;
+}
+
+.navbar {
+    width: auto;
+    height: 70px;
+    background-color: #252E3E;
+}
+.navbar h1 {
+    margin: 0;
+    font-family: "Passion One", regular;
+    font-size: 40px;
+    color: #9FEF00;
+    text-align: center;
+    padding-top: 14px;
+}
+
