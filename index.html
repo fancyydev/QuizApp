@@ -23,17 +23,17 @@
         <div class="questions">
            
             <label for="">¿Cuál es la definicion de filosofia?</label><br>
-            <input type="text" id="quest1"><br><br>
+            <input type="text" id="answer1"><br><br>
             <label for="">¿Cuál es el proposito de la educacion?</label><br>
-            <input type="text" id="quest2"><br><br>
+            <input type="text" id="answer2"><br><br>
             <label for="">¿Cuál es una vida que merece la pena ser vivida?</label><br>
-            <input type="text" id="quest3"><br><br>
+            <input type="text" id="answer3"><br><br>
             <label for="">¿Que es lo que estas creando?</label><br>
-            <input type="text" id="quest4"><br><br>
+            <input type="text" id="answer4"><br><br>
             <label for="">¿Que te gustaria cambiar?</label><br>
-            <input type="text" id="quest5"><br><br>
+            <input type="text" id="answer5"><br><br>
 
-            <button id="response" onclick="response()">RESPONDER</button>
+            <button id="reply" onclick="reply()">RESPONDER</button>
         </div>
         <div class="section">
             <label id="ascending">00</label>
@@ -43,12 +43,12 @@
     <script>
         let ascendingTiming = document.getElementById("ascending");
         let descendingTiming = document.getElementById("descending");
-        let button = document.getElementById("response");
-        let intervalo;
+        let button = document.getElementById("reply");
+        let interval;
 
         let count = 0;
         function startTiming() {
-            intervalo = setInterval(tictac, 1000);
+            interval = setInterval(tictac, 1000);
         }
 
         function tictac() {
@@ -57,7 +57,7 @@
                 ascendingTiming.textContent = String(count).padStart(2,0);
                 descendingTiming.textContent = String(30 - count).padStart(2,0);
             } else {
-                clearInterval(intervalo); // Detener el intervalo
+                clearInterval(interval); 
                 alert("JUEGO TERMINADO");
                 button.textContent = "REINTENTAR";
                 button.style.backgroundColor = "#EF0E00";
@@ -65,25 +65,25 @@
             }
         }
 
-        function response() {
+        function reply() {
             if (count < 30) {
-                let quest1 = document.getElementById("quest1").value;
-                let quest2 = document.getElementById("quest2").value;
-                let quest3 = document.getElementById("quest3").value;
-                let quest4 = document.getElementById("quest4").value;
-                let quest5 = document.getElementById("quest5").value;
+                let answer1 = document.getElementById("answer1").value;
+                let answer2 = document.getElementById("answer2").value;
+                let answer3 = document.getElementById("answer3").value;
+                let answer4 = document.getElementById("answer4").value;
+                let answer5 = document.getElementById("answer5").value;
 
-                if (quest1 === '' || quest2 === '' || quest3 === '' || quest4 === '' || quest5 === '') {
+                if (answer1 === '' || answer2 === '' || answer3 === '' || answer4 === '' || answer5 === '') {
                     alert("Por favor, responde todas las preguntas.");
                     return;
                 }
 
                 alert("TUS RESPUESTAS FUERON LAS SIGUIENTES \n" 
-                        + quest1 + "\n" 
-                        + quest2 + "\n" 
-                        + quest3 + "\n" 
-                        + quest4 + "\n" 
-                        + quest5 + "\n"     
+                        + answer1 + "\n" 
+                        + answer2 + "\n" 
+                        + answer3 + "\n" 
+                        + answer4 + "\n" 
+                        + answer5 + "\n"     
                     );
 
                 location.reload()
